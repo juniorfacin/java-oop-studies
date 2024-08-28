@@ -11,9 +11,9 @@ public class Condicional {
             System.out.println("\nFilme retrô que vale a pena assistir!");
         }
 
-        System.out.println();
+        System.out.println(notaDoFilme);
 
-        if (incluidoNoPlano || tipoDePlano.equals("Plus")) {
+        if (incluidoNoPlano == true || tipoDePlano.equals("Plus")) {
             System.out.println("Filme liberado para assistir.");
         } else {
             System.out.println("Filme não está liberado, será preciso alugar.");
