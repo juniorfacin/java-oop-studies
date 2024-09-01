@@ -1,12 +1,12 @@
-package br.com.screenmatch.model;
+package br.com.alura.screenmatch.model;
 
 public class Filme {
-    String nome;
-    int anoDeLancamento;
-    boolean incluidoNoPlano;
-    double somaAvaliacoes;
-    int totalDeAvaliacao;
-    int duracaoEmMinutos;
+    private String nome;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
+    private double somaAvaliacoes;
+    private int totalDeAvaliacao;
+    private int duracaoEmMinutos;
 
     public String getNome() {
         return nome;

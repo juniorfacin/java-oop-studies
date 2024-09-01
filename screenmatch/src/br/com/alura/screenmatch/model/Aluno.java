@@ -1,4 +1,4 @@
-package br.com.screenmatch.model;
+package br.com.alura.screenmatch.model;
 
 public class Aluno {
     private String nome;

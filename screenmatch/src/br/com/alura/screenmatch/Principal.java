@@ -1,9 +1,7 @@
-package br.com.screenmatch;
+package br.com.alura.screenmatch;
 
-import br.com.screenmatch.model.Aluno;
-import br.com.screenmatch.model.Musica;
-import br.com.screenmatch.model.Pessoa;
-import br.com.screenmatch.model.CalculadoraDobro;
+import br.com.alura.screenmatch.model.Aluno;
+
 import java.util.Scanner;
 
 public class Principal {

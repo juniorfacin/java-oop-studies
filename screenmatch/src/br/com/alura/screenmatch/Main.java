@@ -1,6 +1,6 @@
-package br.com.screenmatch;
+package br.com.alura.screenmatch;
 
-import br.com.screenmatch.model.Filme;
+import br.com.alura.screenmatch.model.Filme;
 
 public class Main {
     public static void main(String[] args) {
