@@ -3,12 +3,18 @@
 Esta é uma formação ministrada pela [Alura]("https://www.alura.com.br") com a finalidade de inserir o estudante no universo 
 da Programação Orientada a Objetos (OOP) em Java e incorporar as boas práticas de codificação.
 
-## 1. Java: criando a sua primeira aplicação
+## 1. Criando a sua primeira aplicação
 - Criação de um projeto em Java com o IntelliJ.
 - Processo de compilação e execução de uma aplicação.
 - Tipos de dados.
 - Uso do Scanner, uso de Concidionais e Loops.
 
+## 2. Aplicando a Orientação a Objetos
+- Conceitos de OOP em Java.
+- Modelo de abstração em Java via classes, atributos e métodos.
+- Reaproveitamento de código com Herença.
+- Flexibilidade no código com Polimorfismo.
+- Uso de interfaces.
 
 ##  Tecnologias Utilizadas
 

@@ -1,100 +1,64 @@
 package br.com.alura.screenmatch;
 
-import br.com.alura.screenmatch.model.Aluno;
 
-import java.util.Scanner;
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.model.Episodio;
+import br.com.alura.screenmatch.model.Filme;
+import br.com.alura.screenmatch.model.Serie;
 
 public class Principal {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Filme meuFilme = new Filme();
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
+        System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
-//        System.out.println("Digite o seu nome: ");
-//        String nome = sc.nextLine();
-//
-//        Pessoa pessoa1 = new Pessoa(nome);
-//        pessoa1.dizerOla();
+        meuFilme.exibirFichaTecnica();
+        meuFilme.avalia(8);
+        meuFilme.avalia(5);
+        meuFilme.avalia(10);
+        System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
+        System.out.printf("A média das avaliações é: %.2f%n", meuFilme.pegaMedia());
+//        meuFilme.getSomaDasAvaliacoes();
+//        meuFilme.getTotalDeAvaliacoes();
+//        System.out.println(meuFilme.pegaMedia());
 
-//        System.out.println("Insira um número para Calcular o dobro: ");
-//        int number = sc.nextInt();
-//        CalculadoraDobro numero1 = new CalculadoraDobro(number);
-//        int resultado = numero1.calcularDobro();
-//
-//        System.out.println("O dobro de " + number + " é: " + resultado);
+        Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2000);
+        lost.exibirFichaTecnica();
+        lost.setTemporadas(10);
+        lost.setEpisodiosPorTemporada(10);
+        lost.setMinutosPorEpisodio(50);
+        System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
 
-//        Musica musica = null;
-//
-//        int menu;
-//        do {
-//            System.out.println("Bem-vindo ao avaliador de Músicas!\n" +
-//                    "1 - Criar música\n" +
-//                    "2 - Exibir ficha técnica\n" +
-//                    "3 - Avaliar sua Música\n" +
-//                    "4 - Média das Avaliações\n" +
-//                    "0 - Sair");
-//
-//            menu = sc.nextInt();
-//            sc.nextLine();
-//
-//            switch (menu) {
-//                case 1:
-//                    System.out.println("Digite o título da música:");
-//                    String titulo = sc.nextLine();
-//                    System.out.println("Digite o nome do artista:");
-//                    String artista = sc.nextLine();
-//                    System.out.println("Digite o ano de lançamento:");
-//                    int anoDeLancamento = sc.nextInt();
-//
-//                    musica = new Musica(titulo, artista, anoDeLancamento);
-//                    System.out.println("Música criada com sucesso!\n");
-//                    break;
-//
-//                case 2:
-//                    if (musica != null) {
-//                        musica.exibirFichaTecnica();
-//                    } else {
-//                        System.out.println("Nenhuma música criada ainda.\n");
-//                    }
-//                    break;
-//
-//                case 3:
-//                    if (musica != null) {
-//                        System.out.println("Dê sua nota entre 1 e 10:");
-//                        int nota = sc.nextInt();
-//                        musica.avaliarMusica(nota);
-//                    } else {
-//                        System.out.println("Nenhuma música criada ainda.\n");
-//                    }
-//                    break;
-//
-//                case 4:
-//                    if (musica != null) {
-//                        double media = musica.calcularMediaDeAvaliacao();
-//                        if (media > 0) {
-//                            System.out.printf("A média das avaliações da música '%s' é %.2f%n", musica.getTitulo(), media);
-//                        }
-//                    } else {
-//                        System.out.println("Nenhuma música criada ainda.\n");
-//                    }
-//                    break;
-//
-//                case 0:
-//                    System.out.println("Saindo...");
-//                    break;
-//
-//                default:
-//                    System.out.println("Opção inválida, tente novamente.\n");
-//            }
-//        } while (menu != 0);
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
 
-        System.out.println("Bem-vindo Aluno, digite seu Nome e Idade");
-        System.out.println("Nome: ");
-        String nome = sc.nextLine();
-        System.out.println("Idade: ");
-        int idade = sc.nextInt();
-        Aluno aluno = new Aluno(nome, idade);
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
 
-        aluno.exibirDadosAluno();
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        System.out.println("*****************");
+        System.out.println("Filtro de Recomendação:");
+        filtro.filtra(meuFilme);
 
-        sc.close();
+        Episodio episodioLost = new Episodio();
+        episodioLost.setNome("Lost");
+        episodioLost.setAnoDeLancamento(2000);
+        episodioLost.setNumero(1);
+        episodioLost.setSerie(lost);
+        episodioLost.setTotalVisualizacoes(300);
+        episodioLost.exibirFichaTecnica();
+        filtro.filtra(episodioLost);
+
+
     }
 }
