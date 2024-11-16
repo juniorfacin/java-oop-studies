@@ -16,6 +16,13 @@ da Programação Orientada a Objetos (OOP) em Java e incorporar as boas prática
 - Flexibilidade no código com Polimorfismo.
 - Uso de interfaces.
 
+## 3. Trabalhando com Listas e Coleções de Dados
+- Representar uma lista de Objetos em Java.
+- Entendendo o funcionamento do ArrayList<>.
+- Manipular uma lista de objetos.
+- Realizar a ordenação com o Comparable.
+- Type casting.
+
 ##  Tecnologias Utilizadas
 
 <div style="display: inline-block">
@@ -26,7 +33,7 @@ da Programação Orientada a Objetos (OOP) em Java e incorporar as boas prática
 
 ## Desenvolvedor
 
-Junior F.
+Osmar J. Facin Junior
 
 <div style="display: inline-block">
   <a href="https://www.linkedin.com/in/osmarjosefacinjr" target="_blank" title="LinkedIn"><img loading="lazy" 
