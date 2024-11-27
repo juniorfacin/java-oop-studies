@@ -23,6 +23,12 @@ da Programação Orientada a Objetos (OOP) em Java e incorporar as boas prática
 - Realizar a ordenação com o Comparable.
 - Type casting.
 
+## 4. Consumindo API, gravando arquivos e lindando com erros
+- Consumir uma API HTTP Java.
+- Converter uma API para  objetos Java.
+- Manipular dados no formato JSON.
+- Uso do pacote java.io.
+
 ##  Tecnologias Utilizadas
 
 <div style="display: inline-block">
